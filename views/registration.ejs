@@ -10,16 +10,24 @@
         <header>
             <h1>Birder</h1>
         </header>
-        <form action="/login" method="POST">
-            <label><br>
-                Login
+        <% if (session.error) { %>
+            <p><%= session.error %></p>
+            <% session.error = undefined; %>
+        <% } %>
+        <form action="/register" method="POST">
+            <label>
+                Select a new Login<br>
                 <input type="text" name="login" required>
-            </label>
-            <label><br>
-                Password
+            </label><br>
+            <label>
+                Password<br>
                 <input type="password" name="password" required>
-            </label>
-                <input type="submit" value="Sign In">
+            </label><br>
+            <label>
+                Repeat the Password<br>
+                <input type="password" name="password-repeat" required>
+            </label><br>
+            <input type="submit" value="Sign Up">
         </form>
         <footer>
             <p>&copy; 2019</p>

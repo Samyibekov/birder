@@ -32,6 +32,7 @@ BIRDER_DB_PORT=
 # Web App Configurations
 BIRDER_ADMIN_LOGIN=
 BIRDER_ADMIN_PASSWORD=
+BIRDER_SESSION_SECRET=
 ```
 
 3.  Install all the dependencies.
